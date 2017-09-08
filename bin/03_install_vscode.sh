@@ -14,4 +14,3 @@ wget --content-disposition https://go.microsoft.com/fwlink/?LinkID=760868
 sudo gdebi ./code_*_amd64.deb
 
 cd -
-
