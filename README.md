@@ -1,8 +1,8 @@
 # ubuntu-hdl-tools-install
 
-Set of scripts to simplify the installing of HDL development tools on Ubuntu 17.04 (x64).
+Set of scripts to simplify the installing of HDL development tools on Ubuntu 17.04 (x64). Created for Labs and school-training: https://nanoandgiga.com/ngc2017/digital-design
+
 It is assumed that you start to use it with the Ubuntu base system installed (console mode and no tools).
-Those scripts were created for Labs and school-training: https://nanoandgiga.com/ngc2017/digital-design
 
 ## 00_install_desktop.sh
 Installs default Ubuntu-desktop
