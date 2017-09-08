@@ -1,0 +1,28 @@
+--- vco.old	2017-09-08 23:22:06.048997758 +0300
++++ vco	2017-09-09 01:20:25.763487519 +0300
+@@ -10,7 +10,7 @@
+ 
+ # MTI_VCO_MODE environment variable may be set to "32" or "64"
+ # to force selection of 32-bit or 64-bit platform directory for executables.
+-mode=${MTI_VCO_MODE:-""}
++mode=${MTI_VCO_MODE:-"32"}
+ 
+ PATH="/bin:$PATH"
+ 
+@@ -48,6 +48,7 @@
+ done
+ 
+ dir=`dirname "$arg0"`
++export LD_LIBRARY_PATH=${dir}/lib32
+ 
+ vco=${uname}${utype}
+ case $vco in
+@@ -207,7 +208,7 @@
+           2.[5-9]*)         vco="linux" ;;
+           2.[1-9][0-9]*)    vco="linux" ;;
+           3.[0-9]*)    		vco="linux" ;;
+-          *)                vco="linux_rh60" ;;
++          *)                vco="linux" ;;
+         esac
+         if [ ! -x "$dir/$vco/vsim" ]; then
+           if [ -x "$dir/linuxle/vsim" ]; then
