@@ -14,3 +14,5 @@ mkdir $DIST_DIR/quartus
 tar -xf $DIST_DIR/$DIST_NAME -C $DIST_DIR/quartus
 
 $DIST_DIR/quartus/setup.sh --installdir $TARGET_FOLDER
+
+sudo bash -c "echo 'PATH=\$PATH':$TARGET_FOLDER/16.1/quartus/bin/:$TARGET_FOLDER/16.1/modelsim_ase/bin/ > /etc/profile.d/mips-mti-elf.sh"

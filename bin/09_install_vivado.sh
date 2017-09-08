@@ -13,3 +13,5 @@ echo "Please use $TARGET_FOLDER for your installation"
 
 chmod u+x $DIST_DIR/$DIST_NAME
 $DIST_DIR/$DIST_NAME
+
+sudo bash -c "echo 'PATH=\$PATH':$TARGET_FOLDER/Vivado/2017.2/bin/ > /etc/profile.d/mips-mti-elf.sh"
