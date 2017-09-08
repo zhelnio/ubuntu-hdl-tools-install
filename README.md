@@ -42,7 +42,7 @@ Installs Linux and ‘bare metal’ embedded GCC-based toolchains from Imaginati
 Downloads Quartus-lite-16.1.0.196 from Intel's site. You may have to register on altera.com and to to update the URL from this page: https://www.altera.com/products/design-software/fpga-design/quartus-prime/download.html
 
 ### 06_install_quartus.sh
-Installs Quartus-lite-16.1.0.196. You have to update the package name if it was changed on the previous step
+Installs Quartus-lite-16.1.0.196. You have to update the package name if it was changed on the previous step. Please run it from GUI console.
 
 ### 07_bugfix_quartus.sh
 Fixes the Quartus-lite-16.1.0.196 problems with Ubuntu  17.04 (x64) distribution.
@@ -52,4 +52,4 @@ Downloads Vivado_SDK_2017.2 network installer. Please get your download URL from
 Auth on Xilinx site is required
 
 ### 09_install_vivado.sh
-Installs Vivado_SDK_2017.2. You have to update the package name if it was changed on the previous step
+Installs Vivado_SDK_2017.2. You have to update the package name if it was changed on the previous step. Please run it from GUI console.
