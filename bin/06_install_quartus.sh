@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TARGET_FOLDER=/opt/altera
+TARGET_FOLDER=/opt/altera/16.1
 DIST_NAME=Quartus-lite-16.1.0.196-linux.tar
 DIST_DIR=../pkg
 
