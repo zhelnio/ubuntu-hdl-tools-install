@@ -1,6 +1,7 @@
 #!/bin/bash
 
-DIST_DIR=../pkg
+SCRIPTPATH=$( cd $(dirname $0) ; pwd -P )
+DIST_DIR=$SCRIPTPATH/../pkg
 
 mkdir -p $DIST_DIR
 cd $DIST_DIR

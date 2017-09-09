@@ -2,7 +2,9 @@
 
 TARGET_FOLDER=/opt/xilinx
 DIST_NAME=Xilinx_Vivado_SDK_2017.2_0616_1_Lin64.bin
-DIST_DIR=../pkg
+
+SCRIPTPATH=$( cd $(dirname $0) ; pwd -P )
+DIST_DIR=$SCRIPTPATH/../pkg
 
 mkdir -p $DIST_DIR
 

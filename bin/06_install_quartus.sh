@@ -2,7 +2,9 @@
 
 TARGET_FOLDER=/opt/altera/16.1
 DIST_NAME=Quartus-lite-16.1.0.196-linux.tar
-DIST_DIR=../pkg
+
+SCRIPTPATH=$( cd $(dirname $0) ; pwd -P )
+DIST_DIR=$SCRIPTPATH/../pkg
 TMP_DIR=/tmp
 
 mkdir -p $DIST_DIR
