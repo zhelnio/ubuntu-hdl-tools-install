@@ -54,4 +54,4 @@ Downloads Vivado_SDK_2017.2 network installer. Please get your download URL from
 Auth on Xilinx site is required
 
 ### 09_install_vivado.sh
-Installs Vivado_SDK_2017.2. You have to update the package name if it was changed on the previous step. Please run it from GUI console.
+Installs Vivado_SDK_2017.2. You have to update the package name if it was changed on the previous step. Please run it from GUI console. Please use /opt/xilinx for your installation in installer GUI dialog
