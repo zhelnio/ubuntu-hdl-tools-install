@@ -1,8 +1,9 @@
 #!/bin/bash
 
-#Please get your download URL from https://www.xilinx.com/support/download.html
-#auth on Xilinx site is required
-DOWNLOAD_URL="https://xilinx-ax-dl.entitlenow.com/dl/ul/2017/06/16/R209883081/Xilinx_Vivado_SDK_2017.2_0616_1_Lin64.bin/734bdedd4f9720ad462ee733b71a0988/59B371A4?akdm=0&filename=Xilinx_Vivado_SDK_2017.2_0616_1_Lin64.bin"
+# Please get your download URL from https://www.xilinx.com/support/download.html
+# Auth on Xilinx site is required
+# The simple way to get this link is to start download in browser and then copy the URL of downloading file
+DOWNLOAD_URL="<insert your link from https://www.xilinx.com/support/download.html>"
 
 SCRIPTPATH=$( cd $(dirname $0) ; pwd -P )
 DIST_DIR=$SCRIPTPATH/../pkg
