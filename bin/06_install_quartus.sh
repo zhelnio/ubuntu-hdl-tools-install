@@ -5,6 +5,7 @@ DIST_NAME=Quartus-lite-16.1.0.196-linux.tar
 
 SCRIPTPATH=$( cd $(dirname $0) ; pwd -P )
 DIST_DIR=$SCRIPTPATH/../pkg
+MISC_DIR=$SCRIPTPATH/../misc
 TMP_DIR=/tmp
 
 mkdir -p $DIST_DIR
@@ -20,5 +21,5 @@ $TMP_DIR/quartus/setup.sh --installdir $TARGET_FOLDER
 
 sudo bash -c "echo 'PATH=\$PATH':$TARGET_FOLDER/quartus/bin/:$TARGET_FOLDER/modelsim_ase/bin/ > /etc/profile.d/quartus-16.1.sh"
 
-sudo cp $SCRIPT_PATH/100-altera.rules /etc/udev/rules.d/
+sudo cp $MISC_DIR/100-altera.rules /etc/udev/rules.d/
 sudo service udev restart

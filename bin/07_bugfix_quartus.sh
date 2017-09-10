@@ -2,6 +2,8 @@
 
 ALTERA_PATH=/opt/altera/16.1
 
+SCRIPTPATH=$( cd $(dirname $0) ; pwd -P )
+MISC_DIR=$SCRIPTPATH/../misc
 CUR_DIR=`pwd`
 
 sudo dpkg --add-architecture i386
@@ -37,5 +39,5 @@ cd $CUR_DIR
 SIM_SCRIPT=$ALTERA_PATH/modelsim_ase/vco
 cp $SIM_SCRIPT $SIM_SCRIPT.orig
 chmod u+w $SIM_SCRIPT
-patch -i ./quartus.16.1-ubuntu.17.04.patch $SIM_SCRIPT
+patch -i $MISC_DIR/quartus.16.1-ubuntu.17.04.patch $SIM_SCRIPT
 chmod u-w $SIM_SCRIPT
