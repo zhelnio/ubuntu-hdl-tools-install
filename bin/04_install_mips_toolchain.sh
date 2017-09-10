@@ -24,3 +24,6 @@ tar -xzf $DIST_DIR/Codescape.GNU.Tools.Package.2016.05-06.for.MIPS.MTI.Bare.Meta
 
 sudo bash -c "echo 'PATH=\$PATH':$TARGET_FOLDER/mips-mti-linux-gnu/2016.05-06/bin/ > /etc/profile.d/mips-mti-linux-gnu.sh"
 sudo bash -c "echo 'PATH=\$PATH':$TARGET_FOLDER/mips-mti-elf/2016.05-06/bin/ > /etc/profile.d/mips-mti-elf.sh"
+
+. /etc/profile.d/mips-mti-linux-gnu.sh
+. /etc/profile.d/mips-mti-elf.sh
