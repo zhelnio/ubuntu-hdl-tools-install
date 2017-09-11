@@ -16,6 +16,4 @@ CUR_USER=`whoami`
 sudo mkdir -p $TARGET_FOLDER
 sudo cp $DIST_DIR/Mars4_5.jar $TARGET_FOLDER
 
-sudo bash -c "echo alias mars=\'java -jar $TARGET_FOLDER/Mars4_5.jar\' > /etc/profile.d/mars-mips.sh"
-
-. /etc/profile.d/mars-mips.sh
+echo "alias mars='java -jar $TARGET_FOLDER/Mars4_5.jar'" > ~/.bash_aliases
