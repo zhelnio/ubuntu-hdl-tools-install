@@ -22,8 +22,8 @@ sudo chown $CUR_USER $TARGET_FOLDER
 tar -xzf $DIST_DIR/Codescape.GNU.Tools.Package.2016.05-06.for.MIPS.MTI.Linux.CentOS-5.x86_64.tar.gz -C $TARGET_FOLDER
 tar -xzf $DIST_DIR/Codescape.GNU.Tools.Package.2016.05-06.for.MIPS.MTI.Bare.Metal.CentOS-5.x86_64.tar.gz -C $TARGET_FOLDER
 
-sudo bash -c "echo 'PATH=\$PATH':$TARGET_FOLDER/mips-mti-linux-gnu/2016.05-06/bin/ > /etc/profile.d/mips-mti-linux-gnu.sh"
-sudo bash -c "echo 'PATH=\$PATH':$TARGET_FOLDER/mips-mti-elf/2016.05-06/bin/ > /etc/profile.d/mips-mti-elf.sh"
+echo 'PATH=$PATH':$TARGET_FOLDER/mips-mti-linux-gnu/2016.05-06/bin/ | sudo tee /etc/profile.d/mips-mti-linux-gnu.sh
+echo export MIPS_LINUXGNU_ROOT=$TARGET_FOLDER/mips-mti-linux-gnu/2016.05-06 | sudo tee -a /etc/profile.d/mips-mti-linux-gnu.sh
 
-. /etc/profile.d/mips-mti-linux-gnu.sh
-. /etc/profile.d/mips-mti-elf.sh
+echo 'PATH=$PATH':$TARGET_FOLDER/mips-mti-elf/2016.05-06/bin/ | sudo tee /etc/profile.d/mips-mti-elf.sh
+echo export MIPS_ELF_ROOT=$TARGET_FOLDER/mips-mti-elf/2016.05-06 | sudo tee -a /etc/profile.d/mips-mti-elf.sh
