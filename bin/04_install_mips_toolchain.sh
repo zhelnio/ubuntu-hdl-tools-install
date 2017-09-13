@@ -27,3 +27,6 @@ echo export MIPS_LINUXGNU_ROOT=$TARGET_FOLDER/mips-mti-linux-gnu/2016.05-06 | su
 
 echo 'PATH=$PATH':$TARGET_FOLDER/mips-mti-elf/2016.05-06/bin/ | sudo tee /etc/profile.d/mips-mti-elf.sh
 echo export MIPS_ELF_ROOT=$TARGET_FOLDER/mips-mti-elf/2016.05-06 | sudo tee -a /etc/profile.d/mips-mti-elf.sh
+
+#adding current user to dialout group to use /dev/ttyUSB0 for hardware debug
+sudo gpasswd --add $CUR_USER dialout
