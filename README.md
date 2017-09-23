@@ -1,9 +1,18 @@
 # ubuntu-hdl-tools-install
 
-Set of scripts to simplify the installing of HDL development tools on Ubuntu 17.04 (x64).
+Set of scripts to simplify the installing of HDL development tools on Ubuntu 17.04 (x64). Can be run on Ubuntu base system install
 
-Created for Labs and school-training: https://nanoandgiga.com/ngc2017/digital-design
-
+## Tools
+ - Icarus Verilog & GTKWave
+ - MARS MIPS Simulator
+ - Intel Quartus Lite 16.1
+ - Xilinx Vivado SDK 2017.2
+ - Imagination Technologies MIPS Toolchain
+ - Microsoft Visual Studio Code
+ - Sublime Text 3
+ - git
+ - openocd
+ 
 ## Usage
 It is assumed that you start to use it with the Ubuntu base system installed (console mode and no tools).
 ```
