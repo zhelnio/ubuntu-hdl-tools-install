@@ -14,7 +14,7 @@ cd ubuntu-hdl-tools-install/bin
 ./01_install_console.sh
 ./02_install_open.sh
 ...
-./09_install_vivado.sh
+./11_install_sublime3.sh
 ```
 
 ## Scripts description
@@ -38,10 +38,10 @@ Installs open source development and debug tools
 Installs Microsoft Visual Studio Code open source editor
 
 ### 04_install_mips_toolchain.sh
-Installs Linux and ‘bare metal’ embedded GCC-based toolchains from Imagination Technologies site. You may have to renew the links to packages on https://community.imgtec.com/developers/mips/tools/codescape-mips-sdk/ 
+Installs Linux and ‘bare metal’ embedded GCC-based toolchains from Imagination Technologies website. You may have to renew the links to packages on https://community.imgtec.com/developers/mips/tools/codescape-mips-sdk/ 
 
 ### 05_download_quartus.sh
-Downloads Quartus-lite-16.1.0.196 from Intel's site. You may have to register on altera.com and to to update the URL from this page: https://www.altera.com/products/design-software/fpga-design/quartus-prime/download.html
+Downloads Quartus-lite-16.1.0.196 from Intel website. You may have to register on altera.com and to to update the URL from this page: https://www.altera.com/products/design-software/fpga-design/quartus-prime/download.html
 
 ### 06_install_quartus.sh
 Installs Quartus-lite-16.1.0.196. You have to update the package name if it was changed on the previous step. Please run it from GUI console.
@@ -51,7 +51,13 @@ Fixes the Quartus-lite-16.1.0.196 problems with Ubuntu  17.04 (x64) distribution
 
 ### 08_download_vivado.sh
 Downloads Vivado_SDK_2017.2 network installer. Please get your download URL from https://www.xilinx.com/support/download.html
-Auth on Xilinx site is required
+Auth on Xilinx website is required
 
 ### 09_install_vivado.sh
 Installs Vivado_SDK_2017.2. You have to update the package name if it was changed on the previous step. Please run it from GUI console. Please use /opt/xilinx for your installation in installer GUI dialog
+
+### 10_install_mars.sh
+Installs MARS MIPS Simulator
+
+### 11_install_sublime3.sh
+Installs Sublime Text 3 editor
