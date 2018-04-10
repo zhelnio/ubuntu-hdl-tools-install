@@ -16,4 +16,4 @@ CUR_USER=`whoami`
 sudo mkdir -p $TARGET_FOLDER
 sudo cp $DIST_DIR/Mars4_5.jar $TARGET_FOLDER
 
-echo "alias mars='java -jar $TARGET_FOLDER/Mars4_5.jar'" > ~/.bash_aliases
+echo "alias mars='java -jar $TARGET_FOLDER/Mars4_5.jar'" >> ~/.bash_aliases
