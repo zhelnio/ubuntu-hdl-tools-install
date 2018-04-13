@@ -1,19 +1,23 @@
 #!/bin/bash
 
-TARGET_FOLDER=/opt/mars
+CUR_DIR=${BASH_SOURCE%/*}
+    
+source $CUR_DIR/install.conf
+source $CUR_DIR/include.bash
 
-SCRIPTPATH=$( cd $(dirname $0) ; pwd -P )
-DIST_DIR=$SCRIPTPATH/../pkg
+# check if MARS is already installed
+if [ -"$(command -v mars)" != 0 ]; then
+  echo 'MARS is already installed' >&2
+  exit 0
+fi
 
-mkdir -p $DIST_DIR
-cd $DIST_DIR
+# search for package or download it
+PROGRAM_JAR=`check_and_download $MARS_URL $DOWNLOAD_DIR $MARS_PKG_NAME`
 
-wget http://courses.missouristate.edu/KenVollmar/mars/MARS_4_5_Aug2014/Mars4_5.jar
+# install 
+sudo mkdir -p $MARS_PATH
+sudo cp $PROGRAM_JAR $MARS_PATH
 
-cd -
-
-CUR_USER=`whoami`
-sudo mkdir -p $TARGET_FOLDER
-sudo cp $DIST_DIR/Mars4_5.jar $TARGET_FOLDER
-
-echo "alias mars='java -jar $TARGET_FOLDER/Mars4_5.jar'" >> ~/.bash_aliases
+# write the PATH
+JAR=$(basename $PROGRAM_JAR)
+echo "alias mars='java -jar $MARS_PATH/$JAR'" | sudo tee $MARS_PROFILE
