@@ -1,32 +1,49 @@
 #!/bin/bash
 
-TARGET_FOLDER=/opt/codescape
+CUR_DIR=${BASH_SOURCE%/*}
+    
+source $CUR_DIR/install.conf
+source $CUR_DIR/include.bash
 
-SCRIPTPATH=$( cd $(dirname $0) ; pwd -P )
-DIST_DIR=$SCRIPTPATH/../pkg
+# install MIPS toolchain from Ubuntu repository
+#sudo apt install gcc-mipsel-linux-gnu
 
-mkdir -p $DIST_DIR
+# Install the Codescape SDK or toolchains if required
+# Check for SDK (is URL uncommented in config?)
+if [ -v CODESCAPE_SDK_URL ]; then
+    echo "Installing the Codescape MIPS SDK"
+    INSTALLER=`check_and_download $CODESCAPE_SDK_URL $DOWNLOAD_DIR $CODESCAPE_SDK_PKG_NAME`
+    chmod a+x $INSTALLER
+    sudo $INSTALLER
+fi
 
-cd $DIST_DIR
+# Check for Bare Metal toolchain (is URL uncommented in config?)
+if [ -v CODESCAPE_BAREMETAL_URL ]; then
+    echo "Installing the Codescape MIPS Bare Metal toolchain"
+    INSTALLER_TGZ=`check_and_download $CODESCAPE_BAREMETAL_URL $DOWNLOAD_DIR $CODESCAPE_BAREMETAL_PKG_NAME`
 
-#https://community.imgtec.com/developers/mips/tools/codescape-mips-sdk/
-wget --content-disposition https://community.imgtec.com/?do-download=linux-x64-mti-bare-metal-2016-05-06
-wget --content-disposition https://community.imgtec.com/?do-download=linux-x64-mti-gnu-linux-2016-05-06
+    sudo mkdir -p $CODESCAPE_TOOLCHAINS_PATH
+    sudo tar -xzf $INSTALLER_TGZ -C $CODESCAPE_TOOLCHAINS_PATH
 
-cd -
+    #fix the perms
+    sudo find $CODESCAPE_TOOLCHAINS_PATH -exec chmod o-w {} \;
+fi
 
-CUR_USER=`whoami`
-sudo mkdir -p $TARGET_FOLDER
-sudo chown $CUR_USER $TARGET_FOLDER
+# Check for Linux toolchain (is URL uncommented in config?)
+if [ -v CODESCAPE_LINUX_URL ]; then
+    echo "Installing the Codescape MIPS Linux toolchain"
+    INSTALLER_TGZ=`check_and_download $CODESCAPE_LINUX_URL $DOWNLOAD_DIR $CODESCAPE_LINUX_PKG_NAME`
 
-tar -xzf $DIST_DIR/Codescape.GNU.Tools.Package.2016.05-06.for.MIPS.MTI.Linux.CentOS-5.x86_64.tar.gz -C $TARGET_FOLDER
-tar -xzf $DIST_DIR/Codescape.GNU.Tools.Package.2016.05-06.for.MIPS.MTI.Bare.Metal.CentOS-5.x86_64.tar.gz -C $TARGET_FOLDER
+    sudo mkdir -p $CODESCAPE_TOOLCHAINS_PATH
+    sudo tar -xzf $INSTALLER_TGZ -C $CODESCAPE_TOOLCHAINS_PATH
 
-echo 'PATH=$PATH':$TARGET_FOLDER/mips-mti-linux-gnu/2016.05-06/bin/ | sudo tee /etc/profile.d/mips-mti-linux-gnu.sh
-echo export MIPS_LINUXGNU_ROOT=$TARGET_FOLDER/mips-mti-linux-gnu/2016.05-06 | sudo tee -a /etc/profile.d/mips-mti-linux-gnu.sh
+    #fix the perms
+    sudo find $CODESCAPE_TOOLCHAINS_PATH -exec chmod o-w {} \;
+fi
 
-echo 'PATH=$PATH':$TARGET_FOLDER/mips-mti-elf/2016.05-06/bin/ | sudo tee /etc/profile.d/mips-mti-elf.sh
-echo export MIPS_ELF_ROOT=$TARGET_FOLDER/mips-mti-elf/2016.05-06 | sudo tee -a /etc/profile.d/mips-mti-elf.sh
+# overwrite the PATH settings
+sudo rm -f $CODESCAPE_TOOLCHAINS_PROFILE
+find /opt/imgtec/ -type d -name bin | sort -r | xargs -I {} echo 'export PATH=$PATH:'{} | sudo tee -a $CODESCAPE_TOOLCHAINS_PROFILE
 
-#adding current user to dialout group to use /dev/ttyUSB0 for hardware debug
-sudo gpasswd --add $CUR_USER dialout
+# addign current user to dialout group to use /dev/ttyUSB* for hardware debug
+sudo adduser `whoami` dialout
