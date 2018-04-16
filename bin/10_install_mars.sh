@@ -5,8 +5,10 @@ CUR_DIR=${BASH_SOURCE%/*}
 source $CUR_DIR/install.conf
 source $CUR_DIR/include.bash
 
+source ~/.bash_aliases
+
 # check if MARS is already installed
-if [ -"$(command -v mars)" != 0 ]; then
+if [ "$(alias mars 2>/dev/null)" ]; then
   echo 'MARS is already installed' >&2
   exit 0
 fi
@@ -20,4 +22,6 @@ sudo cp $PROGRAM_JAR $MARS_PATH
 
 # write the PATH
 JAR=$(basename $PROGRAM_JAR)
-echo "alias mars='java -jar $MARS_PATH/$JAR'" | sudo tee $MARS_PROFILE
+echo "alias mars='java -jar $MARS_PATH/$JAR'" >> ~/.bash_aliases
+
+echo 'MARS installed successfully'
