@@ -6,6 +6,9 @@ function check_and_download
     DOWNLOAD_DIR=$2
     FILE_2CHECK=$3
 
+    # create download folder if not exist
+    mkdir -p $DOWNLOAD_DIR
+
     # search for downloaded package
     for i in $DOWNLOAD_DIR/$FILE_2CHECK; do
         if [ -f "$i" ]; then 

@@ -2,7 +2,7 @@
 
 CUR_DIR=${BASH_SOURCE%/*}
     
-source $CUR_DIR/install.conf
+source $CUR_DIR/config.bash
 source $CUR_DIR/include.bash
 
 source ~/.bash_aliases
