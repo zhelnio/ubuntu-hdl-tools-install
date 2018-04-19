@@ -52,16 +52,16 @@ Installs MARS MIPS Simulator
 ### 05 MIPS toolchain
 Select the prefered one 
 
-## 05.1_install_mips_ubuntu.sh
+#### 05.1_install_mips_ubuntu.sh
 MIPS toolchain from Ubuntu repository
 
-## 05.2_install_mips_codescape_sdk.sh
+#### 05.2_install_mips_codescape_sdk.sh
 Download and install the Codescape SDK. You may have to renew the links to packages in ![bin/config.bash](bin/config.bash)
 
-## 05.3_install_mips_codescape_bm.sh
+#### 05.3_install_mips_codescape_bm.sh
 Download and install the Codescape Bare Metal toolchain. You may have to renew the links to packages in ![bin/config.bash](bin/config.bash)
 
-## 05.4_install_mips_codescape_linux.sh
+#### 05.4_install_mips_codescape_linux.sh
 Download and install the Codescape Linux toolchain. You may have to renew the links to packages in ![bin/config.bash](bin/config.bash)
 
 ### 06_install_quartus.sh
