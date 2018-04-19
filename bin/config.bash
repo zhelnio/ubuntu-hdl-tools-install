@@ -54,6 +54,7 @@ QUARTUS_LITE_PROFILE='/etc/profile.d/quartus.sh'
 VIVADO_URL='https://xilinx-ax-dl.entitlenow.com/dl/ul/2018/04/05/R209901852/Xilinx_Vivado_SDK_Web_2018.1_0405_1_Lin64.bin/5408b8e1bba695264a3cfc415e82a302/5AD5FED3?akdm=0&filename=Xilinx_Vivado_SDK_Web_2018.1_0405_1_Lin64.bin'
 VIVADO_PKG_NAME='Xilinx_Vivado_SDK_Web_*_Lin64.bin'
 VIVADO_INSTALL_PATH='/opt/xilinx'
+VIVADO_PROFILE='/etc/profile.d/vivado.sh'
 
 ### 08. Sublime
 SUBLIME_REPO_KEY='https://download.sublimetext.com/sublimehq-pub.gpg'
