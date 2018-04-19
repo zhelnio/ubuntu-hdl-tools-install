@@ -23,7 +23,7 @@ function quartus_target_folder
     QUARTUS_EDITION=`$QUARTUS_LITE_INSTALLER --version | awk '{print tolower($3)}'`
 
     # form folder name
-    QUARTUS_FOLDER="quartus_${QUARTUS_VERSION}_${QUARTUS_EDITION}_"
+    QUARTUS_FOLDER="quartus_${QUARTUS_VERSION}_${QUARTUS_EDITION}"
     INSTALL_FOLDER=$QUARTUS_LITE_INSTALL_PATH/$QUARTUS_FOLDER
 
     #create target folder
