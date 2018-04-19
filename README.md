@@ -5,9 +5,9 @@ Set of scripts to simplify the installing of HDL development tools on Ubuntu 17.
 ## Tools
  - Icarus Verilog & GTKWave
  - MARS MIPS Simulator
- - Intel Quartus Lite 16.1
- - Xilinx Vivado SDK 2017.2
- - Imagination Technologies MIPS Toolchain
+ - Intel Quartus Lite 17.1
+ - Xilinx Vivado SDK 2018.1
+ - MIPS Toolchain
  - Microsoft Visual Studio Code
  - Sublime Text 3
  - git
@@ -23,7 +23,7 @@ cd ubuntu-hdl-tools-install/bin
 ./01_install_console.sh
 ./02_install_open.sh
 ...
-./11_install_sublime3.sh
+./08_install_sublime3.sh
 ```
 
 ## Scripts description
@@ -46,27 +46,29 @@ Installs open source development and debug tools
 ### 03_install_vscode.sh
 Installs Microsoft Visual Studio Code open source editor
 
-### 04_install_mips_toolchain.sh
-Installs Linux and ‘bare metal’ embedded GCC-based toolchains from Imagination Technologies website. You may have to renew the links to packages on https://community.imgtec.com/developers/mips/tools/codescape-mips-sdk/ 
-
-### 05_download_quartus.sh
-Downloads Quartus-lite-16.1.0.196 from Intel website. You may have to register on altera.com and to to update the URL from this page: https://www.altera.com/products/design-software/fpga-design/quartus-prime/download.html
-
-### 06_install_quartus.sh
-Installs Quartus-lite-16.1.0.196. You have to update the package name if it was changed on the previous step. Please run it from GUI console.
-
-### 07_bugfix_quartus.sh
-Fixes the Quartus-lite-16.1.0.196 problems with Ubuntu  17.04 (x64) distribution.
-
-### 08_download_vivado.sh
-Downloads Vivado_SDK_2017.2 network installer. Please get your download URL from https://www.xilinx.com/support/download.html
-Auth on Xilinx website is required
-
-### 09_install_vivado.sh
-Installs Vivado_SDK_2017.2. You have to update the package name if it was changed on the previous step. Please run it from GUI console. Please use /opt/xilinx for your installation in installer GUI dialog
-
-### 10_install_mars.sh
+### 04_install_mars.sh
 Installs MARS MIPS Simulator
 
-### 11_install_sublime3.sh
+### 05 MIPS toolchain
+Select the prefered one 
+
+## 05.1_install_mips_ubuntu.sh
+MIPS toolchain from Ubuntu repository
+
+## 05.2_install_mips_codescape_sdk.sh
+Download and install the Codescape SDK. You may have to renew the links to packages in ![bin/config.bash](bin/config.bash)
+
+## 05.3_install_mips_codescape_bm.sh
+Download and install the Codescape Bare Metal toolchain. You may have to renew the links to packages in ![bin/config.bash](bin/config.bash)
+
+## 05.4_install_mips_codescape_linux.sh
+Download and install the Codescape Linux toolchain. You may have to renew the links to packages in ![bin/config.bash](bin/config.bash)
+
+### 06_install_quartus.sh
+Download and install Quartus-lite from Intel website. You may have to register on altera.com and to update the URL in ![bin/config.bash](bin/config.bash)
+
+### 07_install_vivado.sh
+Installs Vivado SDK. You may have to register on xilinx.com and to update the URL in ![bin/config.bash](bin/config.bash)
+
+### 08_install_sublime3.sh
 Installs Sublime Text 3 editor
