@@ -41,6 +41,7 @@ CODESCAPE_TOOLCHAINS_PROFILE='/etc/profile.d/mips-codescape.sh'
 ### 06. Intel (Altera) Quartus Lite
 # You may have to register on altera.com and to to update donwload URL from this page:
 # https://www.altera.com/products/design-software/fpga-design/quartus-prime/download.html
+#QUARTUS_LITE_URL='http://download.altera.com/akdlm/software/acdsinst/18.0std/614/ib_tar/Quartus-lite-18.0.0.614-linux.tar'
 QUARTUS_LITE_URL='http://download.altera.com/akdlm/software/acdsinst/17.1std.1/593/ib_tar/Quartus-lite-17.1.1.593-linux.tar'
 QUARTUS_LITE_PKG_NAME='Quartus-lite-*-linux.tar'
 QUARTUS_LITE_UNPACK_PATH='/tmp/quartus_installer'
