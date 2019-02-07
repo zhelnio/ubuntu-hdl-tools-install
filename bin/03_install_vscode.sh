@@ -10,11 +10,9 @@ function install_extensions
 {
     echo 'Installing the VSCode extensions:'
     code --install-extension ms-vscode.cpptools
-    code --install-extension donjayamanne.githistory
     code --install-extension slevesque.vscode-hexdump
     code --install-extension kdarkhan.mips
-    code --install-extension mshr-h.systemverilog
-    code --install-extension mshr-h.veriloghdl
+    code --install-extension eirikpre.systemverilog
     code --install-extension sleutho.tcl
     code --install-extension eamodio.gitlens
     code --install-extension plorefice.devicetree
