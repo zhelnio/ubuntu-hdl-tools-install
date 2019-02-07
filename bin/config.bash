@@ -41,8 +41,9 @@ CODESCAPE_TOOLCHAINS_PROFILE='/etc/profile.d/mips-codescape.sh'
 ### 06. Intel (Altera) Quartus Lite
 # You may have to register on altera.com and to to update donwload URL from this page:
 # https://www.altera.com/products/design-software/fpga-design/quartus-prime/download.html
+#QUARTUS_LITE_URL='http://download.altera.com/akdlm/software/acdsinst/17.1std.1/593/ib_tar/Quartus-lite-17.1.1.593-linux.tar'
 #QUARTUS_LITE_URL='http://download.altera.com/akdlm/software/acdsinst/18.0std/614/ib_tar/Quartus-lite-18.0.0.614-linux.tar'
-QUARTUS_LITE_URL='http://download.altera.com/akdlm/software/acdsinst/17.1std.1/593/ib_tar/Quartus-lite-17.1.1.593-linux.tar'
+QUARTUS_LITE_URL='http://download.altera.com/akdlm/software/acdsinst/18.1std/625/ib_tar/Quartus-lite-18.1.0.625-linux.tar'
 QUARTUS_LITE_PKG_NAME='Quartus-lite-*-linux.tar'
 QUARTUS_LITE_UNPACK_PATH='/tmp/quartus_installer'
 QUARTUS_LITE_INSTALLER=$QUARTUS_LITE_UNPACK_PATH/setup.sh
@@ -52,7 +53,7 @@ QUARTUS_LITE_PROFILE='/etc/profile.d/quartus.sh'
 ### 07. Xilinx Vivado
 # You have to register on xilinx.com and to to update donwload URL from this page:
 # https://www.xilinx.com/support/download.html
-VIVADO_URL='https://xilinx-ax-dl.entitlenow.com/dl/ul/2018/04/05/R209901852/Xilinx_Vivado_SDK_Web_2018.1_0405_1_Lin64.bin/5408b8e1bba695264a3cfc415e82a302/5AD5FED3?akdm=0&filename=Xilinx_Vivado_SDK_Web_2018.1_0405_1_Lin64.bin'
+VIVADO_URL='https://xilinx-ax-dl.entitlenow.com/dl/ul/2018/06/15/R209939822/Xilinx_Vivado_SDK_Web_2018.2_0614_1954_Lin64.bin/e3b876364a23e919819bc71a392f0740/5C5C6B0B?akdm=0&filename=Xilinx_Vivado_SDK_Web_2018.2_0614_1954_Lin64.bin'
 VIVADO_PKG_NAME='Xilinx_Vivado_SDK_Web_*_Lin64.bin'
 VIVADO_INSTALL_PATH='/opt/xilinx'
 VIVADO_PROFILE='/etc/profile.d/vivado.sh'
