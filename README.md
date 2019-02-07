@@ -1,12 +1,12 @@
 # ubuntu-hdl-tools-install
 
-Set of scripts to simplify the installing of HDL development tools on Ubuntu 17.04 (x64). Can be run on Ubuntu base system install
+Set of scripts to simplify the installing of HDL development tools on Ubuntu 18.04 (x64). Can be run on Ubuntu base system install
 
 ## Tools
  - Icarus Verilog & GTKWave
  - MARS MIPS Simulator
- - Intel Quartus Lite 17.1
- - Xilinx Vivado SDK 2018.1
+ - Intel Quartus Lite 18.1
+ - Xilinx Vivado SDK 2018.2
  - MIPS Toolchain
  - Microsoft Visual Studio Code
  - Sublime Text 3
