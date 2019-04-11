@@ -1,6 +1,6 @@
 # ubuntu-hdl-tools-install
 
-Set of scripts to simplify the installing of HDL development tools on Ubuntu 18.04 (x64). Can be run on Ubuntu base system install. For Windows 10 you can use (this step-by-step guide)[https://github.com/zhelnio/ddec/blob/master/doc/SoftwarePrerequisites.md].
+Set of scripts to simplify the installing of HDL development tools on Ubuntu 18.04 (x64). Can be run on Ubuntu base system install. For Windows 10 you can use [this step-by-step guide](https://github.com/zhelnio/ddec/blob/master/doc/SoftwarePrerequisites.md).
 
 ## Tools
  - Icarus Verilog & GTKWave
